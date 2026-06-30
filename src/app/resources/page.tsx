@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { ArrowUpRight, BookOpen, Boxes, Braces, GitBranch, Orbit, PanelsTopLeft } from "lucide-react";
+import { ArrowUpRight, BookOpen, Boxes, Braces, Download, GitBranch, Orbit, PanelsTopLeft } from "lucide-react";
 
 import { PageHero } from "@/components/page-hero";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Resources",
@@ -28,6 +29,21 @@ export default function ResourcesPage() {
       />
 
       <div className="mx-auto max-w-[1500px] px-5 py-14 sm:px-8">
+        <section className="edge-frame mb-12 grid gap-8 border border-primary/30 bg-primary/[0.055] p-6 sm:p-8 lg:grid-cols-[1fr_auto] lg:items-center">
+          <div>
+            <p className="technical-label text-primary">Class download // Ready</p>
+            <h2 className="mt-3 text-3xl tracking-[-0.04em] text-white">Grey&apos;s Intro to AI starter vault</h2>
+            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+              A sanitized Obsidian workspace with the ACE + AIOS structure, class checklist, lesson context, Daily Brief skill, and activity destinations. It contains no learner account or personal data.
+            </p>
+          </div>
+          <Button asChild className="h-12 rounded-none px-6">
+            <a href="/downloads/greys-intro-to-ai-starter-vault.zip" download>
+              <Download className="mr-2 h-4 w-4" /> Download starter vault
+            </a>
+          </Button>
+        </section>
+
         <div className="grid gap-px border border-white/10 bg-white/10 md:grid-cols-2 xl:grid-cols-3">
           {resources.map((resource, index) => {
             const Icon = resource.icon;

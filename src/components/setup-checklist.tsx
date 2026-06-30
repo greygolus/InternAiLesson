@@ -77,9 +77,13 @@ export function SetupChecklist() {
             <div className="mt-5 grid gap-3">
               <Button asChild className="h-12 justify-between rounded-none"><a href="https://claude.com/download" target="_blank" rel="noreferrer">Claude Desktop <ExternalLink className="h-4 w-4" /></a></Button>
               <Button asChild variant="outline" className="h-12 justify-between rounded-none border-white/15 bg-transparent"><a href="https://obsidian.md/download" target="_blank" rel="noreferrer">Obsidian <ExternalLink className="h-4 w-4" /></a></Button>
-              <Button disabled variant="outline" className="h-12 justify-between rounded-none border-white/10 bg-transparent text-muted-foreground"><span>Starter vault ZIP</span><Download className="h-4 w-4" /></Button>
+              <Button asChild variant="outline" className="h-12 justify-between rounded-none border-white/15 bg-transparent">
+                <a href="/downloads/greys-intro-to-ai-starter-vault.zip" download>
+                  <span>Starter vault ZIP</span><Download className="h-4 w-4" />
+                </a>
+              </Button>
             </div>
-            <p className="mt-4 text-xs leading-relaxed text-muted-foreground">The vault download button is wired visually; the sanitized ZIP arrives in the next build pass.</p>
+            <p className="mt-4 text-xs leading-relaxed text-muted-foreground">Download, extract, and move the vault somewhere permanent before opening it in Obsidian.</p>
           </div>
 
           <div className="border border-white/12 bg-black/50 p-6">
