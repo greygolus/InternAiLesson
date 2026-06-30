@@ -5,7 +5,7 @@ import { navigation } from "@/lib/navigation";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/8 bg-black/85 backdrop-blur-xl">
+    <header className="print:hidden sticky top-0 z-50 border-b border-white/8 bg-black/85 backdrop-blur-xl">
       <div className="mx-auto flex h-18 max-w-[1500px] items-center gap-5 px-5 sm:px-8">
         <Link href="/" className="group flex shrink-0 items-center gap-3" aria-label="Grey's Intro to AI home">
           <Image

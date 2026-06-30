@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-white/8">
+    <footer className="print:hidden border-t border-white/8">
       <div className="mx-auto flex max-w-[1500px] flex-col gap-5 px-5 py-10 sm:px-8 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="technical-label text-primary/80">Grey&apos;s Intro to AI</p>

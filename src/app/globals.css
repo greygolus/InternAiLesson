@@ -183,3 +183,57 @@
 .form-control {
   @apply border-white/12 bg-white/[0.035] focus-visible:border-primary/60 focus-visible:ring-primary/20;
 }
+
+@media print {
+  @page {
+    size: letter;
+    margin: 0.5in;
+  }
+
+  html,
+  body {
+    background: white !important;
+    color: #111827 !important;
+  }
+
+  .site-noise,
+  .print-hide {
+    display: none !important;
+  }
+
+  .resource-print,
+  .resource-print section,
+  .resource-print div,
+  .resource-print table,
+  .resource-print tr,
+  .resource-print td,
+  .resource-print th,
+  .resource-print li {
+    background: white !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .resource-print .text-white,
+  .resource-print .text-foreground {
+    color: #111827 !important;
+  }
+
+  .resource-print .text-muted-foreground {
+    color: #4b5563 !important;
+  }
+
+  .resource-print .text-primary {
+    color: #1d4ed8 !important;
+  }
+
+  .resource-print .resource-section {
+    break-before: page;
+  }
+
+  .resource-print tr,
+  .resource-print li,
+  .resource-print figure {
+    break-inside: avoid;
+  }
+}

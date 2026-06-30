@@ -1,143 +1,163 @@
-<svg viewBox="0 0 1000 800" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg viewBox="0 0 1200 820" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">AI is like a city</title>
+  <desc id="desc">Companies own plots, models are buildings, harnesses are storefronts, context and data run underground, and connectors, MCPs, APIs, and computer use provide access.</desc>
+
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#d7ecff"/>
-      <stop offset="1" stop-color="#f4f9ff"/>
+      <stop offset="0" stop-color="#07111c"/>
+      <stop offset="1" stop-color="#0c1b2b"/>
     </linearGradient>
-    <linearGradient id="earth" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#5a4636"/>
-      <stop offset="1" stop-color="#3a2c21"/>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#07101a"/>
+      <stop offset="1" stop-color="#03070c"/>
     </linearGradient>
+    <linearGradient id="blueBuilding" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6fc0ff"/>
+      <stop offset="1" stop-color="#255d99"/>
+    </linearGradient>
+    <linearGradient id="tealBuilding" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#72e6d1"/>
+      <stop offset="1" stop-color="#1d766f"/>
+    </linearGradient>
+    <linearGradient id="violetBuilding" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b5a5ff"/>
+      <stop offset="1" stop-color="#5a47a6"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#8acbff" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
   </defs>
 
-  <!-- SKY -->
-  <rect x="0" y="0" width="1000" height="470" fill="url(#sky)"/>
-  <!-- SIDEWALK -->
-  <rect x="0" y="470" width="1000" height="42" fill="#c8ccd2"/>
-  <line x1="0" y1="470" x2="1000" y2="470" stroke="#aab0b8" stroke-width="2"/>
-  <!-- UNDERGROUND -->
-  <rect x="0" y="512" width="1000" height="288" fill="url(#earth)"/>
+  <rect width="1200" height="820" rx="24" fill="url(#sky)"/>
+  <rect width="1200" height="820" rx="24" fill="url(#grid)"/>
 
-  <!-- TITLE -->
-  <text x="500" y="36" text-anchor="middle" font-size="26" font-weight="700" fill="#1f2430">AI is like a City</text>
-  <text x="500" y="58" text-anchor="middle" font-size="14" fill="#4a5160">data underground → plots (companies) → buildings (models) → storefronts (agents)</text>
+  <text x="54" y="58" fill="#edf7ff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">AI IS LIKE A CITY</text>
+  <text x="54" y="88" fill="#8ea7ba" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15">companies own plots  /  models power buildings  /  harnesses are where you work</text>
 
-  <!-- ===== PLOT A: ANTHROPIC ===== -->
-  <rect x="40" y="92" width="262" height="378" rx="10" fill="#C15F3C" opacity="0.10"/>
-  <text x="171" y="112" text-anchor="middle" font-size="14" font-weight="700" fill="#9c4a2e">ANTHROPIC — a company (plot of land)</text>
-
-  <!-- Opus (tall) -->
-  <rect x="78" y="150" width="120" height="320" fill="#C15F3C"/>
-  <rect x="78" y="150" width="120" height="14" fill="#9c4a2e"/>
-  <g fill="#ffe6da">
-    <rect x="96" y="180" width="20" height="26"/><rect x="132" y="180" width="20" height="26"/><rect x="160" y="180" width="20" height="26"/>
-    <rect x="96" y="222" width="20" height="26"/><rect x="132" y="222" width="20" height="26"/><rect x="160" y="222" width="20" height="26"/>
-    <rect x="96" y="264" width="20" height="26"/><rect x="132" y="264" width="20" height="26"/><rect x="160" y="264" width="20" height="26"/>
-    <rect x="96" y="306" width="20" height="26"/><rect x="132" y="306" width="20" height="26"/><rect x="160" y="306" width="20" height="26"/>
+  <g transform="translate(850 38)">
+    <rect width="296" height="74" rx="10" fill="#0b1826" stroke="#63b8f6" stroke-opacity="0.35"/>
+    <text x="18" y="27" fill="#63b8f6" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="11" letter-spacing="1.6">THE DURABLE IDEA</text>
+    <text x="18" y="50" fill="#dcecf8" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14">Harness and model are separate choices.</text>
   </g>
-  <text x="138" y="405" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">Claude Opus</text>
-  <text x="138" y="419" text-anchor="middle" font-size="10" fill="#ffe1d6">(model)</text>
 
-  <!-- Hermes storefront on Opus -->
-  <rect x="92" y="430" width="92" height="40" fill="#2a2f3a"/>
-  <rect x="92" y="422" width="92" height="12" fill="#7c5cff"/>
-  <rect x="130" y="446" width="18" height="24" fill="#ffffff"/>
-  <text x="138" y="462" text-anchor="middle" font-size="11" font-weight="700" fill="#7c5cff" transform="translate(0,-26)">Hermes</text>
+  <!-- plots -->
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <rect x="42" y="146" width="340" height="398" rx="16" fill="#63b8f6" fill-opacity="0.045" stroke="#63b8f6" stroke-opacity="0.28"/>
+    <text x="62" y="176" fill="#63b8f6" font-size="12" font-weight="700" letter-spacing="1.4">PLOT 01 / COMPANY</text>
+    <text x="62" y="200" fill="#dcecf8" font-size="19" font-weight="600">Anthropic</text>
 
-  <!-- Haiku (short) -->
-  <rect x="216" y="338" width="76" height="132" fill="#d98368"/>
-  <rect x="216" y="338" width="76" height="12" fill="#b35c40"/>
-  <g fill="#ffe6da"><rect x="230" y="362" width="18" height="22"/><rect x="262" y="362" width="18" height="22"/></g>
-  <text x="254" y="412" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">Claude Haiku</text>
-  <text x="254" y="426" text-anchor="middle" font-size="9" fill="#fff">(smaller model)</text>
-  <rect x="232" y="440" width="44" height="30" fill="#2a2f3a"/>
-  <rect x="232" y="433" width="44" height="9" fill="#39b58a"/>
+    <rect x="430" y="146" width="340" height="398" rx="16" fill="#72e6d1" fill-opacity="0.045" stroke="#72e6d1" stroke-opacity="0.28"/>
+    <text x="450" y="176" fill="#72e6d1" font-size="12" font-weight="700" letter-spacing="1.4">PLOT 02 / COMPANY</text>
+    <text x="450" y="200" fill="#dcecf8" font-size="19" font-weight="600">OpenAI</text>
 
-  <!-- ===== PLOT B: OPENAI ===== -->
-  <rect x="360" y="72" width="290" height="398" rx="10" fill="#0e9f81" opacity="0.10"/>
-  <text x="505" y="110" text-anchor="middle" font-size="14" font-weight="700" fill="#0b7d66">OPENAI — a company (plot of land)</text>
-
-  <!-- GPT building (tall) -->
-  <rect x="388" y="120" width="174" height="350" fill="#10a37f"/>
-  <rect x="388" y="120" width="174" height="14" fill="#0b7d66"/>
-  <g fill="#d6f5ec">
-    <rect x="408" y="150" width="20" height="26"/><rect x="446" y="150" width="20" height="26"/><rect x="484" y="150" width="20" height="26"/><rect x="522" y="150" width="20" height="26"/>
-    <rect x="408" y="192" width="20" height="26"/><rect x="446" y="192" width="20" height="26"/><rect x="484" y="192" width="20" height="26"/><rect x="522" y="192" width="20" height="26"/>
-    <rect x="408" y="234" width="20" height="26"/><rect x="446" y="234" width="20" height="26"/><rect x="484" y="234" width="20" height="26"/><rect x="522" y="234" width="20" height="26"/>
-    <rect x="408" y="276" width="20" height="26"/><rect x="446" y="276" width="20" height="26"/><rect x="484" y="276" width="20" height="26"/><rect x="522" y="276" width="20" height="26"/>
+    <rect x="818" y="146" width="340" height="398" rx="16" fill="#b5a5ff" fill-opacity="0.045" stroke="#b5a5ff" stroke-opacity="0.28"/>
+    <text x="838" y="176" fill="#b5a5ff" font-size="12" font-weight="700" letter-spacing="1.4">PLOT 03 / COMPANY</text>
+    <text x="838" y="200" fill="#dcecf8" font-size="19" font-weight="600">Google</text>
   </g>
-  <text x="475" y="405" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">GPT</text>
-  <text x="475" y="419" text-anchor="middle" font-size="10" fill="#d6f5ec">(model)</text>
 
-  <!-- Hermes storefront on GPT (same brand, different building) -->
-  <rect x="404" y="430" width="92" height="40" fill="#2a2f3a"/>
-  <rect x="404" y="422" width="92" height="12" fill="#7c5cff"/>
-  <rect x="442" y="446" width="18" height="24" fill="#ffffff"/>
-  <text x="450" y="436" text-anchor="middle" font-size="11" font-weight="700" fill="#7c5cff">Hermes</text>
+  <!-- buildings -->
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <g transform="translate(82 236)">
+      <rect width="258" height="278" rx="8" fill="url(#blueBuilding)"/>
+      <rect width="258" height="12" rx="6" fill="#8ed0ff"/>
+      <g fill="#dff2ff" fill-opacity="0.72">
+        <rect x="28" y="42" width="34" height="28" rx="3"/><rect x="84" y="42" width="34" height="28" rx="3"/><rect x="140" y="42" width="34" height="28" rx="3"/><rect x="196" y="42" width="34" height="28" rx="3"/>
+        <rect x="28" y="88" width="34" height="28" rx="3"/><rect x="84" y="88" width="34" height="28" rx="3"/><rect x="140" y="88" width="34" height="28" rx="3"/><rect x="196" y="88" width="34" height="28" rx="3"/>
+      </g>
+      <text x="129" y="154" text-anchor="middle" fill="#07111c" font-size="13" font-weight="700" letter-spacing="1.5">MODEL / CLAUDE</text>
+      <rect x="20" y="190" width="101" height="88" fill="#0a1521" stroke="#dff2ff" stroke-opacity="0.45"/>
+      <rect x="137" y="190" width="101" height="88" fill="#0a1521" stroke="#dff2ff" stroke-opacity="0.45"/>
+      <text x="70" y="224" text-anchor="middle" fill="#dff2ff" font-size="16" font-weight="600">Chat</text>
+      <text x="187" y="224" text-anchor="middle" fill="#dff2ff" font-size="16" font-weight="600">Cowork</text>
+      <text x="70" y="247" text-anchor="middle" fill="#8ea7ba" font-size="10" letter-spacing="1.2">HARNESS</text>
+      <text x="187" y="247" text-anchor="middle" fill="#8ea7ba" font-size="10" letter-spacing="1.2">HARNESS</text>
+      <rect x="58" y="259" width="24" height="19" fill="#63b8f6"/>
+      <rect x="175" y="259" width="24" height="19" fill="#63b8f6"/>
+    </g>
 
-  <!-- a second, different storefront -->
-  <rect x="506" y="436" width="48" height="34" fill="#2a2f3a"/>
-  <rect x="506" y="429" width="48" height="9" fill="#f0a52e"/>
-  <text x="530" y="426" text-anchor="middle" font-size="9" fill="#1f2430">other app</text>
+    <g transform="translate(470 218)">
+      <rect width="258" height="296" rx="8" fill="url(#tealBuilding)"/>
+      <rect width="258" height="12" rx="6" fill="#a5f2e6"/>
+      <g fill="#e1fff9" fill-opacity="0.72">
+        <rect x="28" y="42" width="34" height="28" rx="3"/><rect x="84" y="42" width="34" height="28" rx="3"/><rect x="140" y="42" width="34" height="28" rx="3"/><rect x="196" y="42" width="34" height="28" rx="3"/>
+        <rect x="28" y="88" width="34" height="28" rx="3"/><rect x="84" y="88" width="34" height="28" rx="3"/><rect x="140" y="88" width="34" height="28" rx="3"/><rect x="196" y="88" width="34" height="28" rx="3"/>
+        <rect x="28" y="134" width="34" height="28" rx="3"/><rect x="84" y="134" width="34" height="28" rx="3"/><rect x="140" y="134" width="34" height="28" rx="3"/><rect x="196" y="134" width="34" height="28" rx="3"/>
+      </g>
+      <text x="129" y="190" text-anchor="middle" fill="#07111c" font-size="13" font-weight="700" letter-spacing="1.5">MODEL / GPT</text>
+      <rect x="20" y="208" width="101" height="88" fill="#0a1521" stroke="#e1fff9" stroke-opacity="0.45"/>
+      <rect x="137" y="208" width="101" height="88" fill="#0a1521" stroke="#e1fff9" stroke-opacity="0.45"/>
+      <text x="70" y="242" text-anchor="middle" fill="#e1fff9" font-size="16" font-weight="600">ChatGPT</text>
+      <text x="187" y="242" text-anchor="middle" fill="#e1fff9" font-size="16" font-weight="600">Codex</text>
+      <text x="70" y="265" text-anchor="middle" fill="#8ea7ba" font-size="10" letter-spacing="1.2">HARNESS</text>
+      <text x="187" y="265" text-anchor="middle" fill="#8ea7ba" font-size="10" letter-spacing="1.2">HARNESS</text>
+      <rect x="58" y="277" width="24" height="19" fill="#72e6d1"/>
+      <rect x="175" y="277" width="24" height="19" fill="#72e6d1"/>
+    </g>
 
-  <!-- ===== PLOT C: GOOGLE ===== -->
-  <rect x="700" y="182" width="262" height="288" rx="10" fill="#4285F4" opacity="0.10"/>
-  <text x="831" y="202" text-anchor="middle" font-size="14" font-weight="700" fill="#2a64c8">GOOGLE — a company (plot of land)</text>
-
-  <rect x="722" y="222" width="174" height="248" fill="#4285F4"/>
-  <rect x="722" y="222" width="174" height="14" fill="#2a64c8"/>
-  <g fill="#e3edff">
-    <rect x="742" y="252" width="20" height="26"/><rect x="780" y="252" width="20" height="26"/><rect x="818" y="252" width="20" height="26"/><rect x="856" y="252" width="20" height="26"/>
-    <rect x="742" y="294" width="20" height="26"/><rect x="780" y="294" width="20" height="26"/><rect x="818" y="294" width="20" height="26"/><rect x="856" y="294" width="20" height="26"/>
+    <g transform="translate(858 260)">
+      <rect width="258" height="254" rx="8" fill="url(#violetBuilding)"/>
+      <rect width="258" height="12" rx="6" fill="#d2c9ff"/>
+      <g fill="#f0edff" fill-opacity="0.72">
+        <rect x="28" y="42" width="34" height="28" rx="3"/><rect x="84" y="42" width="34" height="28" rx="3"/><rect x="140" y="42" width="34" height="28" rx="3"/><rect x="196" y="42" width="34" height="28" rx="3"/>
+        <rect x="28" y="88" width="34" height="28" rx="3"/><rect x="84" y="88" width="34" height="28" rx="3"/><rect x="140" y="88" width="34" height="28" rx="3"/><rect x="196" y="88" width="34" height="28" rx="3"/>
+      </g>
+      <text x="129" y="146" text-anchor="middle" fill="#07111c" font-size="13" font-weight="700" letter-spacing="1.5">MODEL / GEMINI</text>
+      <rect x="57" y="166" width="144" height="88" fill="#0a1521" stroke="#f0edff" stroke-opacity="0.45"/>
+      <text x="129" y="201" text-anchor="middle" fill="#f0edff" font-size="16" font-weight="600">Gemini</text>
+      <text x="129" y="224" text-anchor="middle" fill="#8ea7ba" font-size="10" letter-spacing="1.2">HARNESS</text>
+      <rect x="117" y="235" width="24" height="19" fill="#b5a5ff"/>
+    </g>
   </g>
-  <text x="809" y="405" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">Gemini</text>
-  <text x="809" y="419" text-anchor="middle" font-size="10" fill="#e3edff">(model)</text>
-  <rect x="745" y="436" width="60" height="34" fill="#2a2f3a"/>
-  <rect x="745" y="429" width="60" height="9" fill="#ea4335"/>
-  <text x="775" y="426" text-anchor="middle" font-size="9" fill="#1f2430">app</text>
 
-  <!-- ===== ROADS = APIs ===== -->
-  <rect x="302" y="470" width="58" height="42" fill="#4a4f57"/>
-  <line x1="331" y1="474" x2="331" y2="508" stroke="#f3c531" stroke-width="3" stroke-dasharray="6 6"/>
-  <rect x="650" y="470" width="50" height="42" fill="#4a4f57"/>
-  <line x1="675" y1="474" x2="675" y2="508" stroke="#f3c531" stroke-width="3" stroke-dasharray="6 6"/>
-  <text x="331" y="503" text-anchor="middle" font-size="9" fill="#fff">API</text>
-  <text x="675" y="503" text-anchor="middle" font-size="9" fill="#fff">API</text>
-
-  <!-- PERSON: You -->
-  <g transform="translate(331,470)">
-    <circle cx="0" cy="-30" r="7" fill="#f0c9a8" stroke="#1f2430"/>
-    <rect x="-6" y="-22" width="12" height="20" rx="4" fill="#2a2f3a"/>
-    <line x1="-4" y1="-2" x2="-7" y2="8" stroke="#2a2f3a" stroke-width="3"/>
-    <line x1="4" y1="-2" x2="7" y2="8" stroke="#2a2f3a" stroke-width="3"/>
+  <!-- street -->
+  <rect x="0" y="544" width="1200" height="48" fill="#142332"/>
+  <line x1="0" y1="568" x2="1200" y2="568" stroke="#8ea7ba" stroke-opacity="0.38" stroke-width="2" stroke-dasharray="20 22"/>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <circle cx="400" cy="566" r="13" fill="#edf7ff"/>
+    <rect x="392" y="579" width="16" height="28" rx="7" fill="#63b8f6"/>
+    <text x="400" y="624" text-anchor="middle" fill="#edf7ff" font-size="12" font-weight="600">YOU</text>
+    <path d="M420 565 H468" stroke="#63b8f6" stroke-width="2" marker-end="url(#none)"/>
   </g>
-  <text x="331" y="458" text-anchor="middle" font-size="10" font-weight="600" fill="#1f2430">You</text>
 
-  <!-- ===== "Same agent, different building" connector ===== -->
-  <path d="M138 412 C 200 64, 390 64, 450 414" fill="none" stroke="#7c5cff" stroke-width="2.5" stroke-dasharray="7 6"/>
-  <rect x="252" y="64" width="370" height="40" rx="8" fill="#fff" stroke="#7c5cff" stroke-width="1.5"/>
-  <text x="437" y="81" text-anchor="middle" font-size="12" font-weight="700" fill="#5a3fd6">Same storefront "Hermes" = same agent...</text>
-  <text x="437" y="97" text-anchor="middle" font-size="11" fill="#5a3fd6">...just running on a different building (model) behind it</text>
+  <!-- underground context and utilities -->
+  <rect x="0" y="592" width="1200" height="228" rx="0 0 24 24" fill="url(#ground)"/>
+  <text x="54" y="632" fill="#edf7ff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">YOUR CONTEXT + THE OUTSIDE WORLD</text>
+  <text x="54" y="656" fill="#8ea7ba" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13">files, notes, preferences, history, web data, apps, and services</text>
 
-  <!-- ===== UNDERGROUND: internet and data ===== -->
-  <text x="500" y="548" text-anchor="middle" font-size="15" font-weight="700" fill="#f0e9e0">THE INTERNET &amp; DATA — flows underneath like water &amp; power</text>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <rect x="54" y="684" width="190" height="70" rx="10" fill="#0c1b2b" stroke="#63b8f6" stroke-opacity="0.5"/>
+    <text x="72" y="709" fill="#63b8f6" font-size="11" font-weight="700" letter-spacing="1.2">CONNECTOR</text>
+    <text x="72" y="733" fill="#dcecf8" font-size="14">Packaged app access</text>
 
-  <!-- pipes -->
-  <g stroke="#6b7075" stroke-width="3">
-    <rect x="40" y="585" width="920" height="22" rx="11" fill="#9aa0a6"/>
-    <rect x="40" y="660" width="920" height="22" rx="11" fill="#9aa0a6"/>
+    <rect x="264" y="684" width="190" height="70" rx="10" fill="#0c1b2b" stroke="#72e6d1" stroke-opacity="0.5"/>
+    <text x="282" y="709" fill="#72e6d1" font-size="11" font-weight="700" letter-spacing="1.2">MCP</text>
+    <text x="282" y="733" fill="#dcecf8" font-size="14">Common agent adapter</text>
+
+    <rect x="474" y="684" width="190" height="70" rx="10" fill="#0c1b2b" stroke="#b5a5ff" stroke-opacity="0.5"/>
+    <text x="492" y="709" fill="#b5a5ff" font-size="11" font-weight="700" letter-spacing="1.2">API</text>
+    <text x="492" y="733" fill="#dcecf8" font-size="14">Software request contract</text>
+
+    <rect x="684" y="684" width="190" height="70" rx="10" fill="#0c1b2b" stroke="#ffbd66" stroke-opacity="0.5"/>
+    <text x="702" y="709" fill="#ffbd66" font-size="11" font-weight="700" letter-spacing="1.2">COMPUTER USE</text>
+    <text x="702" y="733" fill="#dcecf8" font-size="14">Screen-level fallback</text>
+
+    <rect x="894" y="620" width="252" height="134" rx="12" fill="#0b1826" stroke="#63b8f6" stroke-opacity="0.35"/>
+    <text x="914" y="648" fill="#63b8f6" font-size="11" font-weight="700" letter-spacing="1.2">HOW WORK REPEATS</text>
+    <text x="914" y="678" fill="#edf7ff" font-size="14" font-weight="600">Prompt = work order</text>
+    <text x="914" y="704" fill="#edf7ff" font-size="14" font-weight="600">Skill = reusable playbook</text>
+    <text x="914" y="730" fill="#edf7ff" font-size="14" font-weight="600">Automation = standing order</text>
   </g>
-  <g fill="#19c6dd">
-    <circle cx="120" cy="596" r="5"/><circle cx="240" cy="596" r="5"/><circle cx="360" cy="596" r="5"/><circle cx="480" cy="596" r="5"/><circle cx="600" cy="596" r="5"/><circle cx="720" cy="596" r="5"/><circle cx="840" cy="596" r="5"/>
-    <circle cx="180" cy="671" r="5"/><circle cx="300" cy="671" r="5"/><circle cx="420" cy="671" r="5"/><circle cx="540" cy="671" r="5"/><circle cx="660" cy="671" r="5"/><circle cx="780" cy="671" r="5"/>
+
+  <!-- utility risers -->
+  <g stroke-width="5" fill="none" filter="url(#glow)">
+    <path d="M149 684 V592 H269 V514" stroke="#63b8f6" stroke-opacity="0.75"/>
+    <path d="M359 684 V640 H599 V514" stroke="#72e6d1" stroke-opacity="0.75"/>
+    <path d="M569 684 V656 H987 V514" stroke="#b5a5ff" stroke-opacity="0.75"/>
   </g>
-  <text x="500" y="640" text-anchor="middle" font-size="11" fill="#cfe3ff">data flowing (the cyan dots)</text>
 
-  <!-- utility riser into the GPT-Hermes storefront -->
-  <rect x="445" y="470" width="10" height="115" fill="#19c6dd" opacity="0.85"/>
-  <text x="500" y="702" text-anchor="middle" font-size="11" font-weight="600" fill="#bff3fb">The teal riser = live tools / web access (a "plumbed-in" shop)</text>
-
-  <!-- bottom caption -->
-  <text x="500" y="720" text-anchor="middle" font-size="13" font-weight="600" fill="#f0e9e0">You walk into a storefront (agent). It runs in a building (model), owned by a plot (company),</text>
-  <text x="500" y="740" text-anchor="middle" font-size="13" font-weight="600" fill="#f0e9e0">all built on the data underground. Bigger building = bigger model. Old buildings still stand = older versions.</text>
+  <text x="54" y="792" fill="#6f8799" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="10" letter-spacing="1.2">ACCESS IS NOT PERMISSION  /  CONNECT ONLY WHAT THE WORK NEEDS  /  VERIFY BEFORE YOU SHARE OR PUBLISH</text>
 </svg>
