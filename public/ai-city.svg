@@ -1,0 +1,143 @@
+<svg viewBox="0 0 1000 800" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d7ecff"/>
+      <stop offset="1" stop-color="#f4f9ff"/>
+    </linearGradient>
+    <linearGradient id="earth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5a4636"/>
+      <stop offset="1" stop-color="#3a2c21"/>
+    </linearGradient>
+  </defs>
+
+  <!-- SKY -->
+  <rect x="0" y="0" width="1000" height="470" fill="url(#sky)"/>
+  <!-- SIDEWALK -->
+  <rect x="0" y="470" width="1000" height="42" fill="#c8ccd2"/>
+  <line x1="0" y1="470" x2="1000" y2="470" stroke="#aab0b8" stroke-width="2"/>
+  <!-- UNDERGROUND -->
+  <rect x="0" y="512" width="1000" height="288" fill="url(#earth)"/>
+
+  <!-- TITLE -->
+  <text x="500" y="36" text-anchor="middle" font-size="26" font-weight="700" fill="#1f2430">AI is like a City</text>
+  <text x="500" y="58" text-anchor="middle" font-size="14" fill="#4a5160">data underground → plots (companies) → buildings (models) → storefronts (agents)</text>
+
+  <!-- ===== PLOT A: ANTHROPIC ===== -->
+  <rect x="40" y="92" width="262" height="378" rx="10" fill="#C15F3C" opacity="0.10"/>
+  <text x="171" y="112" text-anchor="middle" font-size="14" font-weight="700" fill="#9c4a2e">ANTHROPIC — a company (plot of land)</text>
+
+  <!-- Opus (tall) -->
+  <rect x="78" y="150" width="120" height="320" fill="#C15F3C"/>
+  <rect x="78" y="150" width="120" height="14" fill="#9c4a2e"/>
+  <g fill="#ffe6da">
+    <rect x="96" y="180" width="20" height="26"/><rect x="132" y="180" width="20" height="26"/><rect x="160" y="180" width="20" height="26"/>
+    <rect x="96" y="222" width="20" height="26"/><rect x="132" y="222" width="20" height="26"/><rect x="160" y="222" width="20" height="26"/>
+    <rect x="96" y="264" width="20" height="26"/><rect x="132" y="264" width="20" height="26"/><rect x="160" y="264" width="20" height="26"/>
+    <rect x="96" y="306" width="20" height="26"/><rect x="132" y="306" width="20" height="26"/><rect x="160" y="306" width="20" height="26"/>
+  </g>
+  <text x="138" y="405" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">Claude Opus</text>
+  <text x="138" y="419" text-anchor="middle" font-size="10" fill="#ffe1d6">(model)</text>
+
+  <!-- Hermes storefront on Opus -->
+  <rect x="92" y="430" width="92" height="40" fill="#2a2f3a"/>
+  <rect x="92" y="422" width="92" height="12" fill="#7c5cff"/>
+  <rect x="130" y="446" width="18" height="24" fill="#ffffff"/>
+  <text x="138" y="462" text-anchor="middle" font-size="11" font-weight="700" fill="#7c5cff" transform="translate(0,-26)">Hermes</text>
+
+  <!-- Haiku (short) -->
+  <rect x="216" y="338" width="76" height="132" fill="#d98368"/>
+  <rect x="216" y="338" width="76" height="12" fill="#b35c40"/>
+  <g fill="#ffe6da"><rect x="230" y="362" width="18" height="22"/><rect x="262" y="362" width="18" height="22"/></g>
+  <text x="254" y="412" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">Claude Haiku</text>
+  <text x="254" y="426" text-anchor="middle" font-size="9" fill="#fff">(smaller model)</text>
+  <rect x="232" y="440" width="44" height="30" fill="#2a2f3a"/>
+  <rect x="232" y="433" width="44" height="9" fill="#39b58a"/>
+
+  <!-- ===== PLOT B: OPENAI ===== -->
+  <rect x="360" y="72" width="290" height="398" rx="10" fill="#0e9f81" opacity="0.10"/>
+  <text x="505" y="110" text-anchor="middle" font-size="14" font-weight="700" fill="#0b7d66">OPENAI — a company (plot of land)</text>
+
+  <!-- GPT building (tall) -->
+  <rect x="388" y="120" width="174" height="350" fill="#10a37f"/>
+  <rect x="388" y="120" width="174" height="14" fill="#0b7d66"/>
+  <g fill="#d6f5ec">
+    <rect x="408" y="150" width="20" height="26"/><rect x="446" y="150" width="20" height="26"/><rect x="484" y="150" width="20" height="26"/><rect x="522" y="150" width="20" height="26"/>
+    <rect x="408" y="192" width="20" height="26"/><rect x="446" y="192" width="20" height="26"/><rect x="484" y="192" width="20" height="26"/><rect x="522" y="192" width="20" height="26"/>
+    <rect x="408" y="234" width="20" height="26"/><rect x="446" y="234" width="20" height="26"/><rect x="484" y="234" width="20" height="26"/><rect x="522" y="234" width="20" height="26"/>
+    <rect x="408" y="276" width="20" height="26"/><rect x="446" y="276" width="20" height="26"/><rect x="484" y="276" width="20" height="26"/><rect x="522" y="276" width="20" height="26"/>
+  </g>
+  <text x="475" y="405" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">GPT</text>
+  <text x="475" y="419" text-anchor="middle" font-size="10" fill="#d6f5ec">(model)</text>
+
+  <!-- Hermes storefront on GPT (same brand, different building) -->
+  <rect x="404" y="430" width="92" height="40" fill="#2a2f3a"/>
+  <rect x="404" y="422" width="92" height="12" fill="#7c5cff"/>
+  <rect x="442" y="446" width="18" height="24" fill="#ffffff"/>
+  <text x="450" y="436" text-anchor="middle" font-size="11" font-weight="700" fill="#7c5cff">Hermes</text>
+
+  <!-- a second, different storefront -->
+  <rect x="506" y="436" width="48" height="34" fill="#2a2f3a"/>
+  <rect x="506" y="429" width="48" height="9" fill="#f0a52e"/>
+  <text x="530" y="426" text-anchor="middle" font-size="9" fill="#1f2430">other app</text>
+
+  <!-- ===== PLOT C: GOOGLE ===== -->
+  <rect x="700" y="182" width="262" height="288" rx="10" fill="#4285F4" opacity="0.10"/>
+  <text x="831" y="202" text-anchor="middle" font-size="14" font-weight="700" fill="#2a64c8">GOOGLE — a company (plot of land)</text>
+
+  <rect x="722" y="222" width="174" height="248" fill="#4285F4"/>
+  <rect x="722" y="222" width="174" height="14" fill="#2a64c8"/>
+  <g fill="#e3edff">
+    <rect x="742" y="252" width="20" height="26"/><rect x="780" y="252" width="20" height="26"/><rect x="818" y="252" width="20" height="26"/><rect x="856" y="252" width="20" height="26"/>
+    <rect x="742" y="294" width="20" height="26"/><rect x="780" y="294" width="20" height="26"/><rect x="818" y="294" width="20" height="26"/><rect x="856" y="294" width="20" height="26"/>
+  </g>
+  <text x="809" y="405" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">Gemini</text>
+  <text x="809" y="419" text-anchor="middle" font-size="10" fill="#e3edff">(model)</text>
+  <rect x="745" y="436" width="60" height="34" fill="#2a2f3a"/>
+  <rect x="745" y="429" width="60" height="9" fill="#ea4335"/>
+  <text x="775" y="426" text-anchor="middle" font-size="9" fill="#1f2430">app</text>
+
+  <!-- ===== ROADS = APIs ===== -->
+  <rect x="302" y="470" width="58" height="42" fill="#4a4f57"/>
+  <line x1="331" y1="474" x2="331" y2="508" stroke="#f3c531" stroke-width="3" stroke-dasharray="6 6"/>
+  <rect x="650" y="470" width="50" height="42" fill="#4a4f57"/>
+  <line x1="675" y1="474" x2="675" y2="508" stroke="#f3c531" stroke-width="3" stroke-dasharray="6 6"/>
+  <text x="331" y="503" text-anchor="middle" font-size="9" fill="#fff">API</text>
+  <text x="675" y="503" text-anchor="middle" font-size="9" fill="#fff">API</text>
+
+  <!-- PERSON: You -->
+  <g transform="translate(331,470)">
+    <circle cx="0" cy="-30" r="7" fill="#f0c9a8" stroke="#1f2430"/>
+    <rect x="-6" y="-22" width="12" height="20" rx="4" fill="#2a2f3a"/>
+    <line x1="-4" y1="-2" x2="-7" y2="8" stroke="#2a2f3a" stroke-width="3"/>
+    <line x1="4" y1="-2" x2="7" y2="8" stroke="#2a2f3a" stroke-width="3"/>
+  </g>
+  <text x="331" y="458" text-anchor="middle" font-size="10" font-weight="600" fill="#1f2430">You</text>
+
+  <!-- ===== "Same agent, different building" connector ===== -->
+  <path d="M138 412 C 200 64, 390 64, 450 414" fill="none" stroke="#7c5cff" stroke-width="2.5" stroke-dasharray="7 6"/>
+  <rect x="252" y="64" width="370" height="40" rx="8" fill="#fff" stroke="#7c5cff" stroke-width="1.5"/>
+  <text x="437" y="81" text-anchor="middle" font-size="12" font-weight="700" fill="#5a3fd6">Same storefront "Hermes" = same agent...</text>
+  <text x="437" y="97" text-anchor="middle" font-size="11" fill="#5a3fd6">...just running on a different building (model) behind it</text>
+
+  <!-- ===== UNDERGROUND: internet and data ===== -->
+  <text x="500" y="548" text-anchor="middle" font-size="15" font-weight="700" fill="#f0e9e0">THE INTERNET &amp; DATA — flows underneath like water &amp; power</text>
+
+  <!-- pipes -->
+  <g stroke="#6b7075" stroke-width="3">
+    <rect x="40" y="585" width="920" height="22" rx="11" fill="#9aa0a6"/>
+    <rect x="40" y="660" width="920" height="22" rx="11" fill="#9aa0a6"/>
+  </g>
+  <g fill="#19c6dd">
+    <circle cx="120" cy="596" r="5"/><circle cx="240" cy="596" r="5"/><circle cx="360" cy="596" r="5"/><circle cx="480" cy="596" r="5"/><circle cx="600" cy="596" r="5"/><circle cx="720" cy="596" r="5"/><circle cx="840" cy="596" r="5"/>
+    <circle cx="180" cy="671" r="5"/><circle cx="300" cy="671" r="5"/><circle cx="420" cy="671" r="5"/><circle cx="540" cy="671" r="5"/><circle cx="660" cy="671" r="5"/><circle cx="780" cy="671" r="5"/>
+  </g>
+  <text x="500" y="640" text-anchor="middle" font-size="11" fill="#cfe3ff">data flowing (the cyan dots)</text>
+
+  <!-- utility riser into the GPT-Hermes storefront -->
+  <rect x="445" y="470" width="10" height="115" fill="#19c6dd" opacity="0.85"/>
+  <text x="500" y="702" text-anchor="middle" font-size="11" font-weight="600" fill="#bff3fb">The teal riser = live tools / web access (a "plumbed-in" shop)</text>
+
+  <!-- bottom caption -->
+  <text x="500" y="720" text-anchor="middle" font-size="13" font-weight="600" fill="#f0e9e0">You walk into a storefront (agent). It runs in a building (model), owned by a plot (company),</text>
+  <text x="500" y="740" text-anchor="middle" font-size="13" font-weight="600" fill="#f0e9e0">all built on the data underground. Bigger building = bigger model. Old buildings still stand = older versions.</text>
+</svg>
