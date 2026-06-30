@@ -13,7 +13,12 @@ export function SiteFooter() {
         <div className="flex flex-wrap gap-x-5 gap-y-2 font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
           <Link href="/lesson" className="hover:text-white">Lesson</Link>
           <Link href="/resources" className="hover:text-white">Resources</Link>
-          <a href="https://greygolus.com" target="_blank" rel="noreferrer" className="hover:text-white">greygolus.com ↗</a>
+          <a
+            href="https://greygolus.com"
+            className="underline decoration-white/25 underline-offset-4 transition-colors hover:text-white focus-visible:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary"
+          >
+            greygolus.com ↗
+          </a>
           <span>© 2026 Grey Golus</span>
         </div>
       </div>
