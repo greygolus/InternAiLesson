@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { AiCityDiagram } from "@/components/ai-city-diagram";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import {
@@ -97,16 +97,7 @@ const slides: Slide[] = [
         <p className="max-w-xl text-lg leading-relaxed text-muted-foreground lg:text-2xl">
           You do not need to memorize every new tool. You need to know which layer you are changing—and why.
         </p>
-        <div className="edge-frame overflow-hidden border border-white/15 bg-white p-2 shadow-[0_0_80px_rgba(83,173,255,0.12)]">
-          <Image
-            src="/ai-city.svg"
-            alt="AI City analogy showing companies, models, harnesses, data, and tools"
-            width={1600}
-            height={900}
-            className="max-h-[43vh] w-full object-contain"
-            priority
-          />
-        </div>
+        <AiCityDiagram className="max-h-[46vh] w-full drop-shadow-[0_0_60px_rgba(83,173,255,0.14)]" />
       </div>
     ),
   },
