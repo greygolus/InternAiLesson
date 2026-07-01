@@ -14,6 +14,7 @@ tags: [general]
 ## Class context
 
 - [[Grey's Intro to AI — Lesson Context]]
+- [[Setup Check]] — pre-class verification file; the /setup page tells learners how to use it.
 
 ## Activity outputs
 

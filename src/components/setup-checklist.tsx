@@ -1,12 +1,14 @@
 "use client";
 
-import { CheckCircle2, Download, ExternalLink, Laptop2, RotateCcw } from "lucide-react";
+import { Check, CheckCircle2, Clipboard, Download, ExternalLink, Laptop2, RotateCcw, ShieldCheck } from "lucide-react";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useLocalDraft } from "@/hooks/use-local-draft";
+import { copyText } from "@/lib/download";
 
 type SetupState = Record<string, boolean>;
 
@@ -22,12 +24,23 @@ const checklist = [
   { id: "chrome", label: "Chrome and Claude in Chrome ready", detail: "Sign in and confirm Claude can access the browser when asked." },
   { id: "computer", label: "Computer use is available", detail: "Open Cowork and confirm the computer-access option appears." },
   { id: "site", label: "ai.greygolus.com opens", detail: "Keep the site bookmarked for class." },
+  { id: "proof", label: "Setup check passed", detail: "Cowork read the starter vault and returned the code word. Use “Prove it works” below." },
 ] as const;
 
 const initialState = Object.fromEntries(checklist.map((item) => [item.id, false])) as SetupState;
 
+const proofPrompt =
+  "Read the file Efforts/Grey's Intro to AI/Setup Check.md in my starter vault and follow the instructions inside it.";
+
 export function SetupChecklist() {
   const { value: checked, setValue: setChecked, reset } = useLocalDraft<SetupState>("greygolus:setup:v1", initialState);
+  const [copied, setCopied] = useState(false);
+
+  async function handleCopyProof() {
+    await copyText(proofPrompt);
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 1600);
+  }
   const complete = checklist.filter((item) => checked[item.id]).length;
   const progress = Math.round((complete / checklist.length) * 100);
 
@@ -68,6 +81,62 @@ export function SetupChecklist() {
                 <CheckCircle2 className="h-5 w-5 text-primary" /> You are ready for class.
               </div>
             ) : null}
+          </section>
+
+          <section className="edge-frame mt-10 border border-white/12 bg-black/35 p-6 sm:p-8">
+            <div className="flex items-start gap-3 border-b border-white/10 pb-6">
+              <ShieldCheck className="mt-1 h-5 w-5 text-primary" />
+              <div>
+                <p className="technical-label text-primary">Final step // Prove it works</p>
+                <h2 className="mt-2 text-3xl tracking-[-0.04em] text-white">One prompt verifies everything.</h2>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  Checkboxes can lie. This test can&apos;t: if Cowork can read your vault and tell you the code word, then
+                  Claude Desktop, Cowork, and the starter vault are all working together.
+                </p>
+              </div>
+            </div>
+
+            <ol className="mt-6 space-y-4 text-sm leading-relaxed text-muted-foreground">
+              <li className="grid grid-cols-[auto_1fr] gap-4">
+                <span className="font-mono text-[10px] text-primary">01</span>
+                <span>Open Claude Desktop and switch to <span className="text-white">Cowork</span>.</span>
+              </li>
+              <li className="grid grid-cols-[auto_1fr] gap-4">
+                <span className="font-mono text-[10px] text-primary">02</span>
+                <span>When Cowork asks which folder to work in, choose your extracted <span className="text-white">Greys-Intro-to-AI-Starter-Vault</span> folder.</span>
+              </li>
+              <li className="grid grid-cols-[auto_1fr] gap-4">
+                <span className="font-mono text-[10px] text-primary">03</span>
+                <span>Paste this prompt and send it:</span>
+              </li>
+            </ol>
+
+            <div className="mt-4 border border-white/12 bg-black/70 p-4">
+              <p className="font-mono text-sm leading-relaxed text-foreground">{proofPrompt}</p>
+              <Button onClick={handleCopyProof} className="mt-4 rounded-none">
+                {copied ? <Check className="mr-2 h-4 w-4" /> : <Clipboard className="mr-2 h-4 w-4" />}
+                {copied ? "Copied" : "Copy prompt"}
+              </Button>
+            </div>
+
+            <div className="mt-6 border border-primary/25 bg-primary/[0.045] p-4 text-sm leading-relaxed text-muted-foreground">
+              <p className="technical-label text-primary">Expected result</p>
+              <p className="mt-2">
+                Cowork replies with the code word, the folder it found the file in, and a confirmation that you&apos;re ready.
+                When it does, check off the final item above. That was also your first real agentic task&mdash;the same
+                pattern the whole class is built on.
+              </p>
+            </div>
+
+            <div className="mt-6">
+              <p className="technical-label text-primary">If it fails</p>
+              <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted-foreground">
+                <li>&bull; <span className="text-white">Cowork can&apos;t see the file:</span> you probably selected the wrong folder. Pick the extracted vault folder itself, not the ZIP or its parent.</li>
+                <li>&bull; <span className="text-white">The vault is still a ZIP:</span> extract it first, move it somewhere permanent, then reconnect.</li>
+                <li>&bull; <span className="text-white">Cowork doesn&apos;t appear:</span> update Claude Desktop and confirm your Claude Pro plan is active.</li>
+                <li>&bull; <span className="text-white">Still stuck:</span> message Grey before class&mdash;the first eight minutes are a check, not a repair window.</li>
+              </ul>
+            </div>
           </section>
         </div>
 
