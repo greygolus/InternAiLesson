@@ -91,13 +91,13 @@ const slides: Slide[] = [
     section: "Map",
     time: "00:08–00:13",
     eyebrow: "The AI City",
-    title: "You need a map, not a dictionary.",
+    title: "You need a map.",
     content: (
-      <div className="grid min-h-0 gap-5 lg:grid-cols-[0.72fr_1.28fr] lg:items-center">
-        <p className="max-w-xl text-lg leading-relaxed text-muted-foreground lg:text-2xl">
-          You do not need to memorize every new tool. You need to know which layer you are changing—and why.
+      <div className="flex min-h-0 flex-col gap-4">
+        <p className="max-w-4xl text-base leading-relaxed text-muted-foreground lg:text-xl">
+          Not a dictionary. You do not memorize every new tool—you learn which layer you are changing, and why.
         </p>
-        <AiCityDiagram className="max-h-[46vh] w-full drop-shadow-[0_0_60px_rgba(83,173,255,0.14)]" />
+        <AiCityDiagram className="mx-auto max-h-[58vh] w-full max-w-[1250px] drop-shadow-[0_0_60px_rgba(83,173,255,0.14)]" />
       </div>
     ),
   },
