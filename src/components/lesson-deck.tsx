@@ -93,11 +93,11 @@ const slides: Slide[] = [
     eyebrow: "The AI City",
     title: "You need a map.",
     content: (
-      <div className="flex min-h-0 flex-col gap-4">
-        <p className="max-w-4xl text-base leading-relaxed text-muted-foreground lg:text-xl">
+      <div className="grid min-h-0 gap-6 lg:grid-cols-[minmax(0,0.38fr)_minmax(0,1.62fr)] lg:items-center">
+        <p className="text-base leading-relaxed text-muted-foreground lg:text-lg">
           Not a dictionary. You do not memorize every new tool—you learn which layer you are changing, and why.
         </p>
-        <AiCityDiagram className="mx-auto max-h-[58vh] w-full max-w-[1250px] drop-shadow-[0_0_60px_rgba(83,173,255,0.14)]" />
+        <AiCityDiagram className="w-full max-h-[52vh] drop-shadow-[0_0_60px_rgba(83,173,255,0.14)]" />
       </div>
     ),
   },
