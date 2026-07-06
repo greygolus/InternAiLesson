@@ -200,15 +200,15 @@ const slides: Slide[] = [
     id: "build",
     section: "Build",
     time: "00:30–00:45",
-    eyebrow: "Cowork + Obsidian",
-    title: "Turn instructions into infrastructure.",
+    eyebrow: "Local-First with Cowork + Obsidian",
+    title: "Own your data. Future-proof your work.",
     content: (
       <div className="grid gap-px border border-white/12 bg-white/10 md:grid-cols-4">
         {[
-          [Database, "Open the vault", "Give Cowork one organized source of context."],
-          [Wrench, "Read the skill", "See the reusable procedure behind the Daily Brief."],
-          [CalendarClock, "Schedule it", "Weekdays at 7:59 AM, with Monday catch-up."],
-          [Check, "Inspect the result", "Make sure it captured real work and clear next steps."],
+          [Database, "Open your vault", "Keep your notes, context, and finished work in files you control."],
+          [Wrench, "Keep the playbook", "Store reusable instructions beside your data—not trapped inside one chat."],
+          [CalendarClock, "Schedule it", "Let Cowork run the routine while the workflow stays readable and portable."],
+          [Check, "Inspect the result", "Keep a history you can verify, move, and improve as tools change."],
         ].map(([Icon, label, detail], index) => {
           const StepIcon = Icon as typeof Database;
           return (
