@@ -125,7 +125,7 @@ const slides: Slide[] = [
   {
     id: "prompt",
     section: "Prompt",
-    time: "00:18–00:30",
+    time: "00:18–00:25",
     eyebrow: "G-O-L-U-S Prompting",
     title: "Better output starts with a better ask.",
     content: (
@@ -147,6 +147,52 @@ const slides: Slide[] = [
             <Link href="/prompt">Open the prompt lab <ArrowRight className="ml-2 h-4 w-4" /></Link>
           </Button>
         </div>
+      </div>
+    ),
+  },
+  {
+    id: "prompting-habits",
+    section: "Prompt",
+    time: "00:25–00:30",
+    eyebrow: "How Grey Actually Prompts",
+    title: "Build the conversation, not the perfect prompt.",
+    content: (
+      <div>
+        <div className="grid gap-px border border-white/12 bg-white/10 lg:grid-cols-3">
+          {[
+            {
+              icon: Bot,
+              label: "Make the AI ask",
+              idea: "You do not need every answer before you begin.",
+              example: "“Interrogate me. Ask one question at a time until you are fully sure what I mean. Then summarize the plan before you start.”",
+            },
+            {
+              icon: FileText,
+              label: "Define the negative space",
+              idea: "What you do not want is useful direction too.",
+              example: "“Make it practical and conversational. Do not use corporate filler, unexplained jargon, or a generic template.”",
+            },
+            {
+              icon: Map,
+              label: "Give direction, not choreography",
+              idea: "GOLUS sets the destination and foundation—not every move.",
+              example: "Goal = destination. Output, Limits, Understanding, and Style = the context needed to get there.",
+            },
+          ].map(({ icon: Icon, label, idea, example }, index) => (
+            <div key={label} className="flex flex-col bg-black/88 p-5 lg:p-6">
+              <div className="flex items-center justify-between">
+                <Icon className="h-5 w-5 text-primary" />
+                <span className="font-mono text-[10px] text-primary/65">0{index + 1}</span>
+              </div>
+              <h3 className="mt-6 text-xl text-white">{label}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{idea}</p>
+              <p className="mt-5 border-l border-primary/50 pl-4 text-sm leading-relaxed text-white/85">{example}</p>
+            </div>
+          ))}
+        </div>
+        <p className="border-x border-b border-primary/25 bg-primary/[0.06] px-5 py-3 text-center font-mono text-[10px] uppercase tracking-[0.12em] text-primary/85">
+          GOLUS spreads context across the five answers. If something is still missing, make asking questions part of the prompt.
+        </p>
       </div>
     ),
   },
