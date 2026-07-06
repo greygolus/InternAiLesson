@@ -44,8 +44,8 @@ const cityConcepts = [
   { icon: Database, concept: "Context", analogy: "Your office", detail: "What the AI knows about you" },
   { icon: FileText, concept: "Prompts", analogy: "Work orders", detail: "What you want done" },
   { icon: BriefcaseBusiness, concept: "Skills", analogy: "Playbooks", detail: "Instructions you can reuse" },
-  { icon: Link2, concept: "Connectors", analogy: "Service lines", detail: "Access to outside data" },
-  { icon: Network, concept: "MCP", analogy: "A shared adapter", detail: "A standard way to use tools" },
+  { icon: Link2, concept: "Connectors", analogy: "Service lines", detail: "Packaged app access for you and your AI" },
+  { icon: Network, concept: "MCP", analogy: "A shared adapter", detail: "A standard for AI to use tools and data" },
   { icon: CalendarClock, concept: "Automation", analogy: "Standing orders", detail: "Work that repeats for you" },
 ];
 
