@@ -1,6 +1,6 @@
 "use client";
 
-import { AiCityDiagram } from "@/components/ai-city-diagram";
+import { ExpandableAiCityDiagram } from "@/components/expandable-ai-city-diagram";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import {
@@ -97,7 +97,7 @@ const slides: Slide[] = [
         <p className="text-base leading-relaxed text-muted-foreground lg:text-lg">
           Not a dictionary. You do not memorize every new tool—you learn which layer you are changing, and why.
         </p>
-        <AiCityDiagram className="w-full max-h-[52vh] drop-shadow-[0_0_60px_rgba(83,173,255,0.14)]" />
+        <ExpandableAiCityDiagram className="w-full max-h-[52vh] drop-shadow-[0_0_60px_rgba(83,173,255,0.14)]" />
       </div>
     ),
   },
@@ -260,6 +260,7 @@ export function LessonDeck() {
     function onKeyDown(event: KeyboardEvent) {
       const target = event.target as HTMLElement | null;
       if (target?.matches("input, textarea, select, [contenteditable='true']")) return;
+      if (document.querySelector('[data-ai-city-modal="true"]')) return;
 
       if (["ArrowRight", "PageDown", " "].includes(event.key)) {
         event.preventDefault();
